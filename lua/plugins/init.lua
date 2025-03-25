@@ -131,7 +131,7 @@ require("plugins.colorscheme"),
 },
 
 {
-    "lambdalisue/gin.vim",
+    "lambdalisue/vim-gin",
     cmd = { "Gin", "GinStatus", "GinDiff", "GinLog" },
     config = function()
       require("plugins.configs.gin")

@@ -1,6 +1,19 @@
 require("nvim-treesitter.configs").setup({
   ensure_installed = {
-    "lua", "javascript", "typescript", "python", "html", "css", "json", "bash"
+    "lua",
+    "javascript",
+    "typescript",
+    "python",
+    "html",
+    "css",
+    "json",
+    "bash",
+    "vim",
+    "go",
+    "rust",
+    "markdown",
+    "yaml",
+    "toml"
   }, -- 必要な言語を指定
   sync_install = false,   -- 同期インストールを無効化
   auto_install = true,    -- 自動インストールを有効化

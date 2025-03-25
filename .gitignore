@@ -1,0 +1,21 @@
+# Plugin managerで自動生成されるもの
+plugin/packer_compiled.lua
+# lazy-lock.json     # 管理したいならコメントアウト！
+
+# プラグインのインストール先
+site/
+pack/
+plugged/
+
+# 一時ファイル、スワップファイル
+*.swp
+*.bak
+*.tmp
+
+# OSごみファイル
+.DS_Store
+Thumbs.db
+
+# 実行ログやキャッシュ
+*.log
+.cache/

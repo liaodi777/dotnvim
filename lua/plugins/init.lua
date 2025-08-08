@@ -5,10 +5,10 @@ require("plugins.colorscheme"),
     "vim-jp/vimdoc-ja",
     event = "VeryLazy"
 },
-    {
-      "vim-denops/denops.vim",
-      lazy = false,  -- 起動時に読み込む
-    },
+{
+    "vim-denops/denops.vim",
+    lazy = false,
+},
 {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },

@@ -3,11 +3,29 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "ts_ls", "pyright" },
+  ensure_installed = {
+    "lua_ls",
+    "ts_ls",
+    "html",
+    "cssls",
+    "pyright",
+    "jsonls",
+    "gopls",
+    "rust_analyzer",
+  },
   automatic_installation = true
 })
 
-local servers = { "lua_ls", "ts_ls", "pyright" }
+local servers = {
+  "lua_ls",
+  "ts_ls",
+  "html",
+  "cssls",
+  "pyright",
+  "jsonls",
+  "gopls",
+  "rust_analyzer",
+}
 for _, server in ipairs(servers) do
   lspconfig[server].setup({
     capabilities = capabilities,

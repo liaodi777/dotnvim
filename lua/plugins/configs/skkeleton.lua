@@ -2,7 +2,7 @@ vim.fn["skkeleton#config"]({
   globalDictionaries = {
         "~/.config/skk/SKK-JISYO.L",
         "~/.config/skk/SKK-JISYO.pinyin",
-    }, -- 必要に応じてパス調整！
+    },
   eggLikeNewline = true,
   registerConvertResult = true,
 })

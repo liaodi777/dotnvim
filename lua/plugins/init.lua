@@ -145,6 +145,17 @@ require("plugins.colorscheme"),
   end,
   event = "VeryLazy", -- 起動時のパフォーマンス最適化：必要になったら読み込む
 },
+{
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons", -- または mini.nvim に置き換え
+    },
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("plugins.configs.render-markdown").setup()
+    end,
+},
 
 }
 

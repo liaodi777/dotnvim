@@ -1,28 +1,3 @@
---vim.fn["ddc#custom#patch_global"]("ui", "native")
---
---vim.fn["ddc#custom#patch_global"]("sources", { "around", "skkeleton" })
---
---vim.fn["ddc#custom#patch_global"]("sourceOptions", {
---  _ = {
---    matchers = { "matcher_head" },
---    sorters = { "sorter_rank" },
---  },
---  around = {
---    mark = "[A]",
---  },
---  skkeleton = {
---    mark = "[SKK]",
---    matchers = { "matcher_head" },
---    sorters = {}, -- 必要なら空のままでもOK
---    converters = {},
---    isVolatile = true,
---    minAutoCompleteLength = 1,
---  },
---})
---
---vim.fn["ddc#enable"]()
-
-
 -- ddc全体の設定
 vim.fn["ddc#custom#patch_global"]("ui", "native")
 
@@ -39,19 +14,19 @@ vim.fn["ddc#custom#patch_global"]("sourceOptions", {
     mark = "[A]",
   },
   skkeleton = {
-    mark = "[SKK]",
-    matchers = { "skkeleton" },  -- Vim scriptで使ってたmatcherを再現
+    mark = 'SKK',
+    matchers = {},
     sorters = {},
     converters = {},
     isVolatile = true,
-    minAutoCompleteLength = 1, -- 昔と同じ値にしてるけど、1でもいいかも◎
+    minAutoCompleteLength = 1,
   },
 })
 
 -- sourceParams（挙動パラメータ）
 vim.fn["ddc#custom#patch_global"]("sourceParams", {
   around = {
-    maxSize = 500, -- 昔の設定をそのまま移植！
+    maxSize = 500,
   },
 })
 

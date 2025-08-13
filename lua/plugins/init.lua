@@ -16,13 +16,28 @@ require("plugins.colorscheme"),
       require("nvim-tree").setup()
     end
 },
+
 {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope-media-files.nvim",
+    },
     config = function()
       require("telescope").setup()
     end
 },
+{
+  "nvim-lua/popup.nvim",
+},
+
+{
+  "nvim-telescope/telescope-media-files.nvim",
+    config = function()
+      require('telescope').load_extension('media_files')
+    end
+},
+
+
 {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -157,6 +172,19 @@ require("plugins.colorscheme"),
     end,
 },
 
+ 
+{
+  'nvim-telekasten/telekasten.nvim',
+  dependencies = { 'nvim-telescope/telescope.nvim' },
+  config = function()
+    require('plugins.configs.telekasten')
+  end
+},
+{
+    'nvim-telekasten/calendar-vim',
+},
+
+ 
 }
 
 return plugins

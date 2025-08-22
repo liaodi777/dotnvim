@@ -12,6 +12,7 @@ require("mason-lspconfig").setup({
     "jsonls",
     "gopls",
     "rust_analyzer",
+    "marksman",
   },
   automatic_installation = true
 })
@@ -25,6 +26,7 @@ local servers = {
   "jsonls",
   "gopls",
   "rust_analyzer",
+  "marksman",
 }
 for _, server in ipairs(servers) do
   lspconfig[server].setup({

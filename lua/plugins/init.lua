@@ -160,18 +160,32 @@ require("plugins.colorscheme"),
   end,
   event = "VeryLazy", -- 起動時のパフォーマンス最適化：必要になったら読み込む
 },
-{
+  {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons", -- または mini.nvim に置き換え
+      "echasnovski/mini.nvim",
+      "echasnovski/mini.icons",
     },
-    event = { "BufReadPre", "BufNewFile" },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+
+    -- event = { "BufReadPre", "BufNewFile" },
+    --
+    ft = { "markdown", "telekasten" },
+
     config = function()
       require("plugins.configs.render-markdown").setup()
     end,
+  },
+{
+    "echasnovski/mini.nvim",
 },
-
+{
+    "echasnovski/mini.icons",
+},
  
 {
   'nvim-telekasten/telekasten.nvim',
@@ -183,6 +197,29 @@ require("plugins.colorscheme"),
 {
     'nvim-telekasten/calendar-vim',
 },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Local Keymaps (which-key)",
+      },
+    },
+  },
 
  
 }

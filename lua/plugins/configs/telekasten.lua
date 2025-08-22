@@ -18,8 +18,8 @@ telekasten.setup({
 
   -- テンプレートもhomeからの相対パスで指定
   template_new_note = 'templates/template_new_note.md',
-  templates_new_daily = 'templates/templates_new_daily.md',
-  templates_new_weekly = 'templates/templates_new_weekly.md',
+  template_new_daily = 'templates/template_new_daily.md',
+  template_new_weekly = 'templates/template_new_weekly.md',
 
   extension = ".md",
   -- Vault
@@ -110,14 +110,17 @@ telekasten.setup({
   },
 
   vaults = {
-    personal = {
-      -- personal ボールトの設定。例:
-      -- home = "/home/user/vaults/personal",
-    }
+--     personal = {
+--       -- personal ボールトの設定。例:
+--       -- home = "/home/user/vaults/personal",
+--     }
   },
 
   -- 使用するクリップボードプログラムを指定
   clipboard_program = "", -- xsel, xclip, wl-paste, osascript
+
+  -- 
+  auto_set_filetype = false,
 
 })
 

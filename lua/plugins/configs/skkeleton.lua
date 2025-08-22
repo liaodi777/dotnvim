@@ -10,3 +10,4 @@ vim.fn["skkeleton#config"]({
 vim.api.nvim_set_keymap("i", "<C-j>", "<Plug>(skkeleton-toggle)", {})
 vim.api.nvim_set_keymap("c", "<C-j>", "<Plug>(skkeleton-toggle)", {})
 
+vim.fn['skkeleton#register_keymap']('input', ';', 'henkanPoint')
